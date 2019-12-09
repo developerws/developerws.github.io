@@ -6,14 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hexo</title>
+  <title>Git&amp;Github的笔记 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;index.html">
+  <meta name="description" content="资源：哔哩哔哩里的git&amp;amp;github、廖雪峰的git教程、使用git和GitHub管理自己的项目">
+<meta name="keywords" content="Git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git&amp;Github的笔记">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;09&#x2F;Git-Github%E7%9A%84%E7%AC%94%E8%AE%B0&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="资源：哔哩哔哩里的git&amp;amp;github、廖雪峰的git教程、使用git和GitHub管理自己的项目">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;08&#x2F;11&#x2F;zb3rsQ2WhinL9OC.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;08&#x2F;11&#x2F;l8PgauX2AF3Htop.png">
+<meta property="og:updated_time" content="2019-12-09T01:59:11.374Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;08&#x2F;11&#x2F;zb3rsQ2WhinL9OC.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,38 +157,144 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Git-Github的笔记" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Git&amp;Github的笔记
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
+
+        
+        
+        <!-- 不蒜子统计 -->
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
 
 <a href="/2019/12/09/Git-Github%E7%9A%84%E7%AC%94%E8%AE%B0/" class="archive-article-date">
   	<time datetime="2019-12-09T01:49:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-09</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/09/Git-Github%E7%9A%84%E7%AC%94%E8%AE%B0/">Git&amp;Github的笔记</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>资源：哔哩哔哩里的<a href="https://www.bilibili.com/video/av55336226?from=search&seid=13969928787899664946" target="_blank" rel="noopener">git&amp;github</a>、<a href="https://www.liaoxuefeng.com/wiki/896043488029600/896067008724000" target="_blank" rel="noopener">廖雪峰的git教程</a>、<a href="https://blog.csdn.net/qq_34802511/article/details/81544216" target="_blank" rel="noopener">使用git和GitHub管理自己的项目</a></p>
+<a id="more"></a> 
 
-        <div class="article-info info-on-right">
-          
+<h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h1><h2 id="对git的一些常用命令"><a href="#对git的一些常用命令" class="headerlink" title="对git的一些常用命令"></a>对git的一些常用命令</h2><ul>
+<li><p><strong><em>git init</em> ：</strong></p>
+<p>初始化当前工作目录，即创建一暂存区域和本地仓库，创建完成后，可在当前目录看到.git文件——本地仓库。</p>
+</li>
+<li><p><strong>签名设置：</strong></p>
+<p>设置签名，即创建一个用户，有两种方式，一种是给当前工作目录设置账号密码，另一种是全局设置，即以后每一个工作目录都是这个账号和密码，假如两个都有，则按照就近原则，项目级别优于系统用户级别（老师说以后IT操作基本按照就近原则，先访问最小的范围的）</p>
+<p>1、单个仓库有效：</p>
+<p>​    <em>git config user.name</em> + 用户名</p>
+<p>​    <em>git config user.email</em> + 邮箱</p>
+<p>2、全局有效：</p>
+<p>​    <em>git config –global user.name</em> + 用户名</p>
+<p>​    <em>git config –global user.email</em>+ 邮箱</p>
+</li>
+<li><p><strong><em>git add</em> 文件/文件夹：</strong></p>
+<p>将内容添加到暂存区域中</p>
+</li>
+<li><p><strong><em>git commit -m</em> ‘解释说明’：</strong></p>
+<p>将暂存区域中的内容提交到本地仓库里</p>
+</li>
+<li><p><strong><em>git rm</em> 文件或者图片：</strong></p>
+<p>删除对文件或者图片的追踪，并且删除文件或者图片，如果只是删除对文件的追踪，使用<em>git rm –cached</em> 文件或者图片</p>
+<p>如果在工作目录意外删除一个文件，可以通过暂存区域将这个文件恢复到工作目录中</p>
+<p>使用命令：<strong>git checkout - - 文件名</strong></p>
+</li>
+<li><p><strong><em>git mv</em> 旧文件 新文件:</strong></p>
+<p>重命名文件</p>
+</li>
+<li><p><strong>git status：</strong></p>
+<p>命令用于显示工作目录和暂存区的状态。使用此命令能看到那些修改被暂存到了, 哪些没有, 哪些文件没有被Git tracked到。</p>
+</li>
+<li><p><strong>git log：</strong></p>
+<p>可以查看历史提交</p>
+</li>
+<li><p><strong>git的分支管理：</strong></p>
+<ul>
+<li><p>创建分支：</p>
+<p><strong>git branch 分支名</strong></p>
+<p>主分支标志为master，新分支标志为feature</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="git的一些常识"><a href="#git的一些常识" class="headerlink" title="git的一些常识"></a>git的一些常识</h2><ul>
+<li><p><strong>利用git添加.gitignore文件：</strong></p>
+<p>此文件在提交本地仓库内容到远程库时，可以自动剔除.gitignore说明要去掉的内容。</p>
+<p>右键点出bash here，输入touch  .gitignore即可创建此文件</p>
+<p>.gitignore只能忽略那些原来没有被track的文件，如果某些文件已经被纳入了版本管理中，则修改.gitignore是无效的。</p>
+<p>有时候发现有不该提交的文件已经提交后，仅仅在.gitignore中加入忽略是不行的，这个时候要执行：git rm -r –cached 文件/文件夹名字，去掉已经托管的文件（即取消追踪）</p>
+<ul>
+<li><p><strong><a href="https://blog.csdn.net/zh854663752/article/details/83352285" target="_blank" rel="noopener">.gitignore文件</a>的过滤规则：</strong></p>
+<p>1、一行只能出现一个语句。</p>
+<p>2、规则的执行顺序是从上到下。</p>
+<p>3、所有空行或者以＃ 开头的行都会被 Git 忽略。</p>
+<p>4、 结束的模式只匹配文件夹以及在该文件夹路径下的内容，但是不匹配该文件</p>
+<p>5、*匹配多个字符。</p>
+<p>6、模式前使用“!”表示忽略模式以外的文件或目录。</p>
+<p>7、 ？匹配单个字符。</p>
+<p>8、”[]”匹配放括中的任一字符</p>
+<p>9、/ 开始的模式匹配项目跟目录</p>
+</li>
+</ul>
+</li>
+<li><p><strong>git的三者关系：</strong></p>
+</li>
+</ul>
+<p>  <img src="https://i.loli.net/2019/08/11/zb3rsQ2WhinL9OC.png" alt="1.png"></p>
+<p>  <img src="https://i.loli.net/2019/08/11/l8PgauX2AF3Htop.png" alt="screenShot.png"></p>
+<h1 id="github"><a href="#github" class="headerlink" title="github"></a>github</h1><h2 id="github的分支使用"><a href="#github的分支使用" class="headerlink" title="github的分支使用"></a>github的分支使用</h2><ul>
+<li><p><strong>pull request</strong></p>
+<p>当你为你的项目创建一个分支时，你实际上创建的是一个允许你尝试新想法的环境。你在分支上做出的更改并不会影响到主分支，所以你可以自由地进行实验和提交更改，通过小伙伴们的代码审查之后，你就可以将其安全地合并到主分支上。</p>
+<p>分支上的管理已搞好。</p>
+</li>
+</ul>
+<h1 id="markdown的应用技巧："><a href="#markdown的应用技巧：" class="headerlink" title="markdown的应用技巧："></a>markdown的应用技巧：</h1><h2 id="添加图片"><a href="#添加图片" class="headerlink" title="添加图片"></a>添加图片</h2><ul>
+<li><p>使用<a href="https://blog.csdn.net/u014563989/article/details/83388005" target="_blank" rel="noopener">图床助手</a></p>
+</li>
+<li><p>使用<a href="https://www.jianshu.com/p/55fd50f289c3" target="_blank" rel="noopener">新浪微博图床</a></p>
+</li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -193,248 +306,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/12/09/Git-Github%E7%9A%84%E7%AC%94%E8%AE%B0/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
 
-<a href="/2019/12/01/%E6%A8%A1%E5%BC%8F%E3%80%81%E6%A1%86%E6%9E%B6%E3%80%81%E6%9E%B6%E6%9E%84%E3%80%81%E5%B9%B3%E5%8F%B0%E7%9A%84%E7%90%86%E8%A7%A3/" class="archive-article-date">
-  	<time datetime="2019-12-01T13:43:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-01</time>
-</a>
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2019/12/01/%E6%A8%A1%E5%BC%8F%E3%80%81%E6%A1%86%E6%9E%B6%E3%80%81%E6%9E%B6%E6%9E%84%E3%80%81%E5%B9%B3%E5%8F%B0%E7%9A%84%E7%90%86%E8%A7%A3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">模式、框架、架构、平台的理解</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/01/%E6%A8%A1%E5%BC%8F%E3%80%81%E6%A1%86%E6%9E%B6%E3%80%81%E6%9E%B6%E6%9E%84%E3%80%81%E5%B9%B3%E5%8F%B0%E7%9A%84%E7%90%86%E8%A7%A3/">模式、框架、架构、平台的理解</a>
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-
-<a href="/2019/12/01/LeetCode%E5%88%B7%E9%A2%98%E9%9B%86%E5%90%88/" class="archive-article-date">
-  	<time datetime="2019-12-01T13:41:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/01/LeetCode%E5%88%B7%E9%A2%98%E9%9B%86%E5%90%88/">LeetCode刷题集合</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">c++</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-
-<a href="/2019/10/27/Markdown%E7%9A%84%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-  	<time datetime="2019-10-27T02:18:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/27/Markdown%E7%9A%84%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/">Markdown的语法笔记</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">markdown</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-
-<a href="/2019/10/27/GitHub-Hexo%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2019-10-27T02:15:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/27/GitHub-Hexo%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">GitHub+Hexo框架搭建博客</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-
-<a href="/2019/10/27/Linux%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E9%9B%86%E5%90%88/" class="archive-article-date">
-  	<time datetime="2019-10-27T02:03:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/27/Linux%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E9%9B%86%E5%90%88/">Linux系统的常用命令集合</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-
-<a href="/2019/10/24/hello-world/" class="archive-article-date">
-  	<time datetime="2019-10-24T02:53:26.294Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/24/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -468,8 +439,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
