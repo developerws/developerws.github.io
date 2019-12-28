@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Git推送到Github的笔记 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Git操作 设置本地用户信息，以使github知道是谁提交的（全局用户）  12git config --global user.name &amp;quot;your name&amp;quot;git config --global user.name &amp;quot;email address&amp;quot;   初始化本地库或者从github拉取一个库  12git initgit clone 要拉取库的地址">
+  <meta name="description" content="忘记！！">
 <meta name="keywords" content="Git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git推送到Github的笔记">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;13&#x2F;Git%E6%8E%A8%E9%80%81%E5%88%B0Github%E7%9A%84%E7%AC%94%E8%AE%B0&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Git操作 设置本地用户信息，以使github知道是谁提交的（全局用户）  12git config --global user.name &amp;quot;your name&amp;quot;git config --global user.name &amp;quot;email address&amp;quot;   初始化本地库或者从github拉取一个库  12git initgit clone 要拉取库的地址">
+<meta property="og:description" content="忘记！！">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-16T14:39:00.310Z">
+<meta property="og:updated_time" content="2019-12-28T11:04:48.047Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -181,7 +181,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Git操作"><a href="#Git操作" class="headerlink" title="Git操作"></a>Git操作</h1><ol>
+        <p> 忘记！！</p>
+<a id="more"></a>
+
+<h1 id="Git操作"><a href="#Git操作" class="headerlink" title="Git操作"></a>Git操作</h1><ol>
 <li>设置本地用户信息，以使github知道是谁提交的（全局用户）</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;your name&quot;</span><br><span class="line">git config --global user.name &quot;email address&quot;</span><br></pre></td></tr></table></figure>
@@ -189,7 +192,7 @@
 <ol start="2">
 <li>初始化本地库或者从github拉取一个库</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git clone 要拉取库的地址		#前提是本机git和gihub关联起来</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git clone 要拉取库的地址		#前提是本机git和gihub关联起来，然后会默认创建一个指向远端代码库的orgin，就不用git remote add orgin了</span><br></pre></td></tr></table></figure>
 
 <ol start="3">
 <li>将工作目录中的内容保存到暂存区</li>
@@ -204,13 +207,27 @@
 <ol start="5">
 <li>将本地内容推到远程库</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git remote add orgin 仓库地址   #本地直接连接到远程库</span><br><span class="line">git push -u orgin master  </span><br><span class="line"></span><br><span class="line">#####其他操作</span><br><span class="line">git remote rm orgin   #删除</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git remote add orgin 仓库地址   #本地直接连接到远程库，orgin为所指仓库的一个标签，可以使用其他名字</span><br><span class="line">git push -u orgin master  #初次关联远程仓库用，意思是将本地仓库内容推送到orgin所指仓库的master分支下</span><br><span class="line">-u的意思是指定orgin为默认仓库，以后使用git push都会推到这里</span><br><span class="line">或者git push A B:C   //B为本地的分支，A和C和上面一样，假如B==C，则可以写为git push A C</span><br><span class="line">#####其他操作</span><br><span class="line">git remote rm orgin   #删除</span><br></pre></td></tr></table></figure>
 
 <h3 id="让Git和Github关联起来"><a href="#让Git和Github关联起来" class="headerlink" title="让Git和Github关联起来"></a>让Git和Github关联起来</h3><ol>
 <li>在 C:\Users\你的用户名.ssh 查找你的公钥和密钥 </li>
 <li>d_rsa是你的私有密钥，id_rsa.pub是公钥，打开文本复制里面的内容，复制到你的github账户setting的ssh </li>
 <li>测试ssh key是否成功，使用命令“ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>” </li>
 </ol>
+<h3 id="删除Github中的某个文件"><a href="#删除Github中的某个文件" class="headerlink" title="删除Github中的某个文件"></a>删除Github中的某个文件</h3><ol>
+<li>第一种方法： 在本地目录将所需要的文件删除</li>
+</ol>
+<ul>
+<li>执行一下命令： </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add *  //把本地仓库的文件上传到暂存区域，将会开始跟踪此文件</span><br><span class="line">git commit -m &apos;del&apos; //上传到本地仓库</span><br><span class="line">git push //上传到远程仓库</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>第二种方法： git -r –cached ‘文件名’</li>
+</ol>
+<h3 id="Git-pull"><a href="#Git-pull" class="headerlink" title="Git pull"></a>Git pull</h3><ul>
+<li>git pull的作用是从一个仓库或者本地的分支拉取并且整合代码</li>
+</ul>
 
       
 
@@ -314,6 +331,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2019/12/19/Python%E7%88%AC%E8%99%AB%E7%9A%84%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Python爬虫的笔记
+        
+      </div>
+    </a>
   
   
     <a href="/2019/12/09/Git-Github%E7%9A%84%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
@@ -458,6 +484,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">c++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
@@ -470,11 +504,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">c++</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
             
             <div class="clearfix"></div>

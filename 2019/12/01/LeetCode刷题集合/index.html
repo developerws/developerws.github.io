@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="为了以后避免忘记常用的知识">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-06T08:45:45.612Z">
+<meta property="og:updated_time" content="2019-12-23T01:51:04.753Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -255,6 +255,43 @@
 <li>srand()函数用来初始化随机数发生器</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;ctime&gt;</span><br><span class="line">void srand(unsigned int seed); #参数seed必须是整数</span><br><span class="line">为了方便可以利用系统时间作为seed参数</span><br><span class="line">srand((unsigned int)time(NULL));</span><br><span class="line"></span><br><span class="line">通用表示公式: </span><br><span class="line">a + rand() % n   #a是起始值，n是整数范围</span><br><span class="line">(rand() % (b-a)) + a	#[a,b)</span><br><span class="line">(rand() % (b-a+1))+ a	#[a,b]</span><br><span class="line">(rand() % (b-a))+ a + 1 #(a,b]</span><br></pre></td></tr></table></figure>
+
+<h3 id="获取字符cin、getchar、get、getline的区别"><a href="#获取字符cin、getchar、get、getline的区别" class="headerlink" title="获取字符cin、getchar、get、getline的区别"></a>获取字符cin、getchar、get、getline的区别</h3><ol>
+<li>cin&gt;&gt;</li>
+</ol>
+<p>cin&gt;&gt;会自动过滤掉空格 回车 tab；若不想过滤掉空白字符，可用noskipws流进行控制</p>
+<ol start="2">
+<li>cin.get()</li>
+</ol>
+<ul>
+<li>cin.get(字符变量名)，只获取一个字符，可接收空格，遇回车结束。</li>
+<li>cin.get(数组名，字符数目),注意，数组的最后一个字符会是’\0’。</li>
+<li>cin.get()，没有参数，主要用于舍弃不需要字符包括回车。</li>
+</ul>
+<ol start="3">
+<li>cin.getline()</li>
+</ol>
+<ul>
+<li>cin.getline(目标位置，接收个数，结束字符)，可以接收空格，目标不能为string类型</li>
+</ul>
+<ol start="4">
+<li>getline()</li>
+</ol>
+<ul>
+<li>用于string类的，使用头文件<string></li>
+</ul>
+<h4 id="getline-和cin-getline-的区别"><a href="#getline-和cin-getline-的区别" class="headerlink" title="getline()和cin.getline()的区别"></a>getline()和cin.getline()的区别</h4><ul>
+<li>cin.getline()接收字符串的是数组，getline()是string类型</li>
+<li>cin.getline()可以接收空格，但不能接收回车，getline()两个都可以</li>
+<li>cin.getline()在数组结尾是’\0’，getline()不会</li>
+</ul>
+<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><ul>
+<li>cin&gt;&gt;不会接收回车，当使用完cin&gt;&gt;后，还有个回车残留输入缓冲区，假如想要忽略掉，可以使用cin.ignore()。</li>
+</ul>
+<h4 id="cin-putback"><a href="#cin-putback" class="headerlink" title="cin.putback"></a>cin.putback</h4><ul>
+<li>将字符放回输入流中</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">c.putback(&apos;a&apos;)	#将字符&apos;a&apos;放回输入流中</span><br><span class="line">cin&gt;&gt;ch			#将字符读取到ch中</span><br><span class="line">cout&lt;&lt;ch</span><br></pre></td></tr></table></figure>
 
 
       
@@ -512,6 +549,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">c++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
@@ -524,11 +569,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">c++</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
             
             <div class="clearfix"></div>
