@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="为了以后避免忘记常用的知识">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-02-04T03:08:20.565Z">
+<meta property="og:updated_time" content="2020-03-09T09:20:52.030Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -297,7 +297,31 @@
 <li><p>条件表达式（三元操作符）</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = x if 条件 else y</span><br></pre></td></tr></table></figure>
 
+
 </li>
+</ul>
+<ul>
+<li><p>列表添加元素</p>
+<ul>
+<li>append()在列表的末尾追加元素，可以是单个元素、列表以及元组，当添加列表或者元组时，会作为整体添加进去</li>
+<li>extend()添加元素时，会把元组或者列表包含的元素逐个加进去</li>
+</ul>
+</li>
+<li><p>result.append(list)，当list里面的元素变化时，result里面的列表元素也跟着变化，也就是result添加的是list的空间，当空间内容变化时，它也变化。</p>
+</li>
+<li><p>若某个等式后面一直要用，最好先在前面计算出来赋给一个值，然后调用值，这样就可以节省时间。</p>
+</li>
+</ul>
+<h4 id="哈希函数hash"><a href="#哈希函数hash" class="headerlink" title="哈希函数hash"></a>哈希函数hash</h4><ul>
+<li>hash()函数可以应用于数字、字符串和对象，不能直接应用于list、set、dictionary。</li>
+<li>hash()函数可以用于验证程序在传输过程中是否被木马修改过。</li>
+</ul>
+<h4 id="set-函数"><a href="#set-函数" class="headerlink" title="set()函数"></a>set()函数</h4><p>set()函数创建一个无序不重复元素集，可进行关系测试，删除重复数据，还可以进行计算交集、差集、并集。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;x = set(&apos;runoob&apos;)</span><br><span class="line">&gt;&gt;&gt; y = set(&apos;google&apos;)</span><br><span class="line">&gt;&gt;&gt; x, y</span><br><span class="line">(set([&apos;b&apos;, &apos;r&apos;, &apos;u&apos;, &apos;o&apos;, &apos;n&apos;]), set([&apos;e&apos;, &apos;o&apos;, &apos;g&apos;, &apos;l&apos;]))   # 重复的被删除</span><br><span class="line">&gt;&gt;&gt; x &amp; y         # 交集</span><br><span class="line">set([&apos;o&apos;])</span><br><span class="line">&gt;&gt;&gt; x | y         # 并集</span><br><span class="line">set([&apos;b&apos;, &apos;e&apos;, &apos;g&apos;, &apos;l&apos;, &apos;o&apos;, &apos;n&apos;, &apos;r&apos;, &apos;u&apos;])</span><br><span class="line">&gt;&gt;&gt; x - y         # 差集</span><br><span class="line">set([&apos;r&apos;, &apos;b&apos;, &apos;u&apos;, &apos;n&apos;])</span><br></pre></td></tr></table></figure>
+
+<h4 id="哈希表——Hash-table"><a href="#哈希表——Hash-table" class="headerlink" title="哈希表——Hash table"></a>哈希表——Hash table</h4><ul>
+<li>为什么要使用？使用哈希表可以进行非常快速的查找操作，而且查找时间为常数，同时不需要元素排列有序</li>
+<li>哈希表由一个直接寻址表和一个哈希函数组成。</li>
 </ul>
 
       
@@ -551,27 +575,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">c++</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">前后端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -580,6 +584,46 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">c++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Ubuntu</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">tomcat</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">前后端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">web</a>
               </li>
             
             <div class="clearfix"></div>

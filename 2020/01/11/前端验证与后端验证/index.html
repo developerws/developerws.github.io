@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="加油！继续努力！！！">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-02-18T15:32:46.215Z">
+<meta property="og:updated_time" content="2020-02-20T14:52:34.776Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -209,13 +209,24 @@
 <p>公钥和私钥就是俗称的不对称加密方式。公钥与私钥是通过一种算法得到的一个密钥对，公钥是密钥对外公开的部分，私钥是非公开的部分。如果使用其中一个密钥加密一种数据，则必须用另一个密钥才能解密。</p>
 <p>总结：</p>
 <ul>
-<li>公钥加密，私钥解密，用于加密数据，保护数据用的</li>
-<li>私钥数字签名，公钥验证，主要用于鉴别用户的真伪，是不是对方为可信任的人</li>
+<li>公钥加密，私钥解密，用于加密数据，保护数据用的，使用著名的RSA公钥加密算法。</li>
+<li>私钥数字签名，公钥验证，主要用于鉴别用户的真伪，是不是对方为可信任的人，只有对方有这个私钥，所以可以鉴别是不是可信任的。</li>
 </ul>
 </li>
 <li><p>什么是数字证书?</p>
 <p>数字证书采用公钥体制，用户使用私钥来解密和签名，使用公钥用来加密和验证签名。</p>
 </li>
+</ul>
+<h3 id="网站为什么需要https和ssl证书"><a href="#网站为什么需要https和ssl证书" class="headerlink" title="网站为什么需要https和ssl证书"></a>网站为什么需要https和ssl证书</h3><ol>
+<li>SSL证书拥有高达256位的加密级别，以保护用户的敏感信息</li>
+<li>保护网站免受攻击，降低黑客攻击</li>
+<li>可以消除浏览器对网站显示“不安全”的影响</li>
+<li>网站涉及到交易安装SSL证书是必要的</li>
+<li>通过从可信的证书颁发机构（CA）验证您的企业身份提高您的品牌声誉–申请SSL证书是需要提供权威机构认证的，非法钓鱼网站是很难申请SSL证书的 </li>
+</ol>
+<ul>
+<li>HTTPS加密协议 = SSL/TLS + http协议。</li>
+<li>SSL证书实际上就是CA机构对用户公钥的认证。</li>
 </ul>
 
       
@@ -469,27 +480,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">c++</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">前后端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -498,6 +489,46 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">c++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Ubuntu</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">tomcat</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">前后端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">web</a>
               </li>
             
             <div class="clearfix"></div>

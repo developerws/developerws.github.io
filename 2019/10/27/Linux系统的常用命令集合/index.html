@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="以下内容包含有安装centos7的一些配置，还有操作系统实验所做的笔记。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-13T09:04:30.814Z">
+<meta property="og:updated_time" content="2020-03-12T00:47:52.846Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -200,9 +200,14 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service  network  restart</span><br></pre></td></tr></table></figure>
 
 <hr>
-<h2 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">touch  filename				 #创建文件</span><br><span class="line">cat  filename				 #查看文件</span><br><span class="line">rm  filename					 #删除文件</span><br><span class="line">cp  源文件 目的文件				 #复制文件</span><br><span class="line">mv  旧名 新名				   #更改文件名字</span><br><span class="line">mv  file  dir					 #将文件file移到dir目录下</span><br><span class="line">whereis  command             #显示命令的路径</span><br><span class="line">which  command   			 #显示路径及使用者所定义的别名</span><br><span class="line">whatis   command  			 #显示命令的功能摘要</span><br></pre></td></tr></table></figure>
+<h2 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">touch  filename				 #创建文件</span><br><span class="line">nano filename		#打开或新建文件，使用直接进入编辑模式</span><br><span class="line">如果要编辑配置文件： nano -w 文件名    否则会引起系统故障</span><br><span class="line">cat  filename				 #查看文件</span><br><span class="line">rm  filename					 #删除文件</span><br><span class="line">cp  源文件 目的文件				 #复制文件</span><br><span class="line">mv  旧名 新名				   #更改文件名字</span><br><span class="line">mv  file  dir					 #将文件file移到dir目录下</span><br><span class="line">whereis  command             #显示命令的路径</span><br><span class="line">which  command   			 #显示路径及使用者所定义的别名</span><br><span class="line">whatis   command  			 #显示命令的功能摘要</span><br><span class="line">:w 文件名         	#如果文件没设置名字，在编辑时可以这样设置。</span><br><span class="line">ctrl+z      #如果出现No Write since last change,可以使用命令退出</span><br></pre></td></tr></table></figure>
 
-<hr>
+<h4 id="保存和退出（相对于nano编辑器）"><a href="#保存和退出（相对于nano编辑器）" class="headerlink" title="保存和退出（相对于nano编辑器）"></a>保存和退出（相对于nano编辑器）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ctrl+o  保存修改			ctrl+x   直接退出</span><br><span class="line">ctrl+c  如果你没有修改好而不小心按了保存键，使用命令取消</span><br></pre></td></tr></table></figure>
+
+<h4 id="剪切和粘贴"><a href="#剪切和粘贴" class="headerlink" title="剪切和粘贴"></a>剪切和粘贴</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">要剪切一整行，请用Ctrl+K（按住Ctrl不放，再按下K键）。光标所在的行便消失了。要粘贴它，只需把光标移动到您所要粘贴的位置，然后按Ctrl+U即可。要移动多行，只需多按几次Ctrl+K把需要移动内容都剪切下来，然后按一次Ctrl+U就可以把刚剪切的内容全部粘贴上来。</span><br></pre></td></tr></table></figure>
+
+
+
 <h2 id="目录操作"><a href="#目录操作" class="headerlink" title="目录操作"></a>目录操作</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/							#根目录</span><br><span class="line">~							#用户自己的home directory</span><br></pre></td></tr></table></figure>
 
 <ol>
@@ -248,12 +253,10 @@
 <hr>
 <hr>
 <h2 id="使用的笔记"><a href="#使用的笔记" class="headerlink" title="使用的笔记"></a>使用的笔记</h2><ul>
-<li><p>在用户里使用root权限创建的文件，用户只能读，不能修改。</p>
-</li>
-<li><p>从普通用户切换到root用户，使用 <strong><em>su</em></strong>，而从root切换到普通用户，使用<strong><em>su - 用户名</em></strong>。</p>
-</li>
-<li><p>关机或重启</p>
-</li>
+<li>在用户里使用root权限创建的文件，用户只能读，不能修改。</li>
+<li>从普通用户切换到root用户，使用 <strong><em>su</em></strong>，而从root切换到普通用户，使用<strong><em>su - 用户名</em></strong>。</li>
+<li>如果使用root权限，但又不想切换用户，可以使用：<strong>sudo</strong> + 命令动作。</li>
+<li>关机或重启</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">shutdown  -h  now   	 			 #关机</span><br><span class="line">shutdown  -r  now 或者 reboot	   #重启</span><br></pre></td></tr></table></figure>
 
@@ -514,27 +517,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">c++</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">前后端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -543,6 +526,46 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">c++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Ubuntu</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">tomcat</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">前后端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">web</a>
               </li>
             
             <div class="clearfix"></div>
